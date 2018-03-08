@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Cricket Score Keeper</string>
+    <string name="_0_runs">DOT</string>
+    <string name="_1_runs">1 runs</string>
+    <string name="_2_runs">2 runs</string>
+    <string name="_3_runs">3 runs</string>
+    <string name="_4_runs">4 runs</string>
+    <string name="_6_runs">6 runs</string>
+    <string name="bat">BATTING</string>
+    <string name="bowl">BOWLING</string>
+    <string name="_0">0-</string>
+    <string name="_0_overs">0 Overs</string>
+    <string name="dot">.</string>
+    <string name="_1_wicket">+1 wicket</string>
+    <string name="_1_wide">+1 wide</string>
+    <string name="score">score</string>
+    <string name="zero">0.</string>
+    <string name="reset">RESET</string>
+    <string name="hyphen">-</string>
+    <string name="overs"> Overs</string>
+</resources>
