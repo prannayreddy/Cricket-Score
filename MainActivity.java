@@ -8,36 +8,63 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     int score = 0, wickets = 0, overs = 0;
+    TextView sView, tView, uView, vView;
+    final static String STORE_VALUE="";
+    final static String STORE_VALUE_1="";
+    final static String STORE_VALUE_2="";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        sView = (TextView) findViewById(R.id.score_text_view);
+        tView = (TextView) findViewById(R.id.wicket_text_view);
+        uView = (TextView) findViewById(R.id.Over_text_view);
+        vView = (TextView) findViewById(R.id.Ball_text_view);
+
+        if (savedInstanceState != null) {
+            score = savedInstanceState.getInt("STORE_VALUE");
+            displayScore(score);
+            wickets = savedInstanceState.getInt("STORE_VALUE_1");
+            displayWicket(wickets);
+            overs = savedInstanceState.getInt("STORE_VALUE_2");
+            displayOvers(overs);
+            displayBalls(overs);
+        }
+
+    }
+
+    protected void onSaveInstanceState(Bundle outState) {
+
+        super.onSaveInstanceState(outState);
+        outState.putInt("STORE_VALUE", score);
+        outState.putInt("STORE_VALUE_1", wickets);
+        outState.putInt("STORE_VALUE_2", overs);
+
     }
 
     public void displayScore(int score) {
-        String temp = score + "-";
-        TextView sView = (TextView) findViewById(R.id.score_text_view);
+        String temp = score + getString(R.string.hyphen);
         sView.setText(temp);
     }
 
     public void displayWicket(int wickets) {
-        TextView sView = (TextView) findViewById(R.id.wicket_text_view);
-        sView.setText(String.valueOf(wickets));
+
+        tView.setText(String.valueOf(wickets));
     }
 
     public void displayOvers(int overs) {
         int temp = overs / 6;
-        String t = temp + ".";
-        TextView sView = (TextView) findViewById(R.id.Over_text_view);
-        sView.setText(t);
+        String t = temp + getString(R.string.dot);
+        uView.setText(t);
     }
 
     public void displayBalls(int overs) {
         int temp = (overs) % (6);
-        String t = temp + " Overs";
-        TextView scoreView = (TextView) findViewById(R.id.Ball_text_view);
-        scoreView.setText(t);
+        String t = temp + getString(R.string.overs);
+        vView.setText(t);
     }
 
     public void addWicket(View v) {
