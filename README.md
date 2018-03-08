@@ -5,3 +5,5 @@ Hi coders, in this github post i've implemented my own logic to keep track of th
 I've just attached the activity_main.xml and MainActivity.java files.
 You can copy and paste the files to the respective files when you create a new project on android studio and run it :)
 Thank you :)
+
+UPDATE- I've also added the strings.xml for reference :)
