@@ -1,4 +1,4 @@
-# CricketScore
+# CricketScore Android App
 Keep score of your own game of India's favorite Cricket!
 
 Hi coders, in this github post i've implemented my own logic to keep track of the overs and wickets in the game. Any critical feedback is highly appreciated.
